@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang='en'>
+<head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Learners - SchoolShield</title><link rel='stylesheet' href='style.css'></head>
+<body><div id='app'></div><script src='shared.js'></script><script>
+	layout('Learners', `<div class='row'><h1>Learners</h1><a class='btn' href='learner-register.html'>Register Learner</a></div><div class='card'><div class='table-wrap'><table><tr><th>ID</th><th>Name</th><th>Grade</th><th>Class</th></tr>${state.learners.map(l=>`<tr><td>${l.id}</td><td>${l.name}</td><td>${l.grade}</td><td>${l.class}</td></tr>`).join('')}</table></div></div>`);
+</script></body>
+</html>

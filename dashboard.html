@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Dashboard – SchoolShield</title>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <div id='app'></div>
+        <script src='shared.js'></script>
+        <script>
+            let inside=state.visitors.filter(v=>v.status==='Inside').length,out=state.visitors.filter(v=>v.status==='Checked Out').length;
+            layout('Dashboard', `
+                <div class='row'><div><h1>Good day, Ms. Mokoena</h1><p class='muted'>Here's what's happening on campus today.</p></div></div>
+                <div class='stats'>${[['Visitors Today',state.visitors.length],['Currently on Campus',inside],['Checked Out',out],['Total Learners',state.learners.length],['Total Staff',state.staff.length],['Security Officers',2]].map(x=>`<div class='card'><div class='muted'>${x[0]}</div><div class='num'>${x[1]}</div></div>`).join('')}</div>
+                <h2>Quick Actions</h2>
+                <div class='actions'><a class='action' href='visitor-register.html'>➕ Register Visitor</a><a class='action' href='qr.html'>▣ Scan QR Code</a><a class='action' href='incident-report.html'>⚠ Report Incident</a><button class='action' onclick='emergency()'>🚨 Emergency Alert</button><a class='action' href='staff.html'>👥 Manage Staff</a><a class='action' href='learner-register.html'>🎓 Register Learner</a><a class='action' href='reports.html'>📊 View Reports</a></div>
+                <div class='card section-card'><h2>Live Visitor Monitoring</h2><div class='table-wrap'>${visitorTable()}</div></div>`);
+        </script>
+    </body>
+</html>

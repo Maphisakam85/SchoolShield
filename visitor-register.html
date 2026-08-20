@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang='en'>
+<head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Register Visitor - SchoolShield</title><link rel='stylesheet' href='style.css'></head>
+<body><div id='app'></div><script src='shared.js'></script><script>
+	layout('Visitors', `<div class='row'><h1>Register Visitor</h1><a class='btn gray' href='visitors.html'>Back</a></div><div class='card form'><form onsubmit='addVisitor(event)'><div class='grid'><div class='field'><label>Full Name</label><input name='name' required></div><div class='field'><label>Visitor ID</label><input name='id' required></div><div class='field'><label>Visitor Type</label><select name='type'><option>Parent</option><option>Guardian</option><option>Supplier</option></select></div><div class='field'><label>Person Being Visited</label><input name='host' required></div><div class='field full'><label>Purpose</label><input name='purpose' required></div></div><br><button class='btn'>Register Visitor</button></form></div>`);
+</script></body>
+</html>

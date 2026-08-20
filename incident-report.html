@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang='en'>
+<head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Report Incident - SchoolShield</title><link rel='stylesheet' href='style.css'></head>
+<body><div id='app'></div><script src='shared.js'></script><script>
+	layout('Incidents', `<div class='row'><h1>Report Incident</h1><a class='btn gray' href='incidents.html'>Back</a></div><div class='card form'><form onsubmit='addIncident(event)'><div class='grid'><div class='field'><label>Category</label><input name='category' required></div><div class='field'><label>Priority</label><select name='priority'><option>Low</option><option>Medium</option><option>High</option><option>Critical</option></select></div><div class='field'><label>Location</label><input name='location' required></div><div class='field'><label>Reported By</label><input name='reported' value='Ms. N. Mokoena'></div><div class='field full'><label>Description</label><textarea name='description' required></textarea></div></div><br><button class='btn'>Submit Incident</button></form></div>`);
+</script></body>
+</html>

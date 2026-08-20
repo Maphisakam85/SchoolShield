@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Audit Trail - SchoolShield</title>
+	<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+	<div id='app'></div>
+	<script src='shared.js'></script>
+	<script>
+		layout('Audit Trail', `<h1>Audit Trail</h1><div class='card'><div class='table-wrap'><table><tr><th>Action</th><th>Time</th></tr>${state.audit.map(a=>`<tr><td>${a.action}</td><td>${a.time}</td></tr>`).join('')}</table></div></div>`);
+	</script>
+</body>
+</html>

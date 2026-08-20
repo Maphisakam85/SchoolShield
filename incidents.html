@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Incidents - SchoolShield</title>
+	<link rel='stylesheet' href='style.css'>
+</head>
+<body>
+	<div id='app'></div>
+	<script src='shared.js'></script>
+	<script>
+		layout('Incidents', `<div class='row'><div><h1>Incident Management</h1><p class='muted'>Track school safety incidents.</p></div><a class='btn' href='incident-report.html'>Report Incident</a></div><div class='card'><div class='table-wrap'><table><tr><th>ID</th><th>Category</th><th>Priority</th><th>Location</th><th>Status</th></tr>${state.incidents.map(i=>`<tr><td>${i.id}</td><td>${i.category}</td><td>${i.priority}</td><td>${i.location}</td><td><span class='badge open'>${i.status}</span></td></tr>`).join('')}</table></div></div>`);
+	</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Notifications – SchoolShield</title><link rel='stylesheet' href='style.css'></head><body><div id='app'></div><script src='shared.js'></script><script>
+layout('Notifications', `<div class='row'><h1>Notifications</h1><button class='btn gray' onclick='markRead()'>Mark all read</button></div><div class='card'>${state.notifications.map(n=>`<div class='notification'><b>${n.title}</b><div class='muted'>${n.status}</div></div>`).join('')}</div>`);
+</script></body></html>
